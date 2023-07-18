@@ -14,6 +14,7 @@
 		95A23E222A66D418003876C1 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 95A23E212A66D418003876C1 /* Apollo */; };
 		95A23E302A670B47003876C1 /* graphql in Resources */ = {isa = PBXBuildFile; fileRef = 95A23E2F2A670B47003876C1 /* graphql */; };
 		95A23E352A670C42003876C1 /* MultimoneyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 95A23E342A670C42003876C1 /* MultimoneyAPI */; };
+		95A23E382A67122A003876C1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A23E372A67122A003876C1 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95A23E2F2A670B47003876C1 /* graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = graphql; sourceTree = SOURCE_ROOT; };
 		95A23E322A670C0C003876C1 /* MultimoneyAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MultimoneyAPI; sourceTree = "<group>"; };
+		95A23E372A67122A003876C1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		95A23E252A66EF95003876C1 /* MultimoneyAPI */ = {
 			isa = PBXGroup;
 			children = (
+				95A23E362A671214003876C1 /* Service */,
 				95A23E2F2A670B47003876C1 /* graphql */,
 			);
 			path = MultimoneyAPI;
@@ -98,6 +101,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95A23E362A671214003876C1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E372A67122A003876C1 /* Network.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 			files = (
 				9576A30D2A66C7D6006F95A6 /* ContentView.swift in Sources */,
 				9576A30B2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift in Sources */,
+				95A23E382A67122A003876C1 /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

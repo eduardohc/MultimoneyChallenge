@@ -12,6 +12,8 @@
 		9576A30F2A66C7D8006F95A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576A30E2A66C7D8006F95A6 /* Assets.xcassets */; };
 		9576A3122A66C7D8006F95A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */; };
 		95A23E222A66D418003876C1 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 95A23E212A66D418003876C1 /* Apollo */; };
+		95A23E302A670B47003876C1 /* graphql in Resources */ = {isa = PBXBuildFile; fileRef = 95A23E2F2A670B47003876C1 /* graphql */; };
+		95A23E352A670C42003876C1 /* MultimoneyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 95A23E342A670C42003876C1 /* MultimoneyAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		9576A30C2A66C7D6006F95A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9576A30E2A66C7D8006F95A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95A23E2F2A670B47003876C1 /* graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = graphql; sourceTree = SOURCE_ROOT; };
+		95A23E322A670C0C003876C1 /* MultimoneyAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MultimoneyAPI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A23E352A670C42003876C1 /* MultimoneyAPI in Frameworks */,
 				95A23E222A66D418003876C1 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,8 +42,10 @@
 		9576A2FE2A66C7D6006F95A6 = {
 			isa = PBXGroup;
 			children = (
+				95A23E312A670C0C003876C1 /* Packages */,
 				9576A3092A66C7D6006F95A6 /* MultimoneyCodeChallenge */,
 				9576A3082A66C7D6006F95A6 /* Products */,
+				95A23E332A670C42003876C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +60,7 @@
 		9576A3092A66C7D6006F95A6 /* MultimoneyCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				95A23E252A66EF95003876C1 /* MultimoneyAPI */,
 				9576A30A2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift */,
 				9576A30C2A66C7D6006F95A6 /* ContentView.swift */,
 				9576A30E2A66C7D8006F95A6 /* Assets.xcassets */,
@@ -67,6 +75,29 @@
 				9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95A23E252A66EF95003876C1 /* MultimoneyAPI */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E2F2A670B47003876C1 /* graphql */,
+			);
+			path = MultimoneyAPI;
+			sourceTree = "<group>";
+		};
+		95A23E312A670C0C003876C1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E322A670C0C003876C1 /* MultimoneyAPI */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		95A23E332A670C42003876C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +118,7 @@
 			name = MultimoneyCodeChallenge;
 			packageProductDependencies = (
 				95A23E212A66D418003876C1 /* Apollo */,
+				95A23E342A670C42003876C1 /* MultimoneyAPI */,
 			);
 			productName = MultimoneyCodeChallenge;
 			productReference = 9576A3072A66C7D6006F95A6 /* MultimoneyCodeChallenge.app */;
@@ -134,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9576A3122A66C7D8006F95A6 /* Preview Assets.xcassets in Resources */,
+				95A23E302A670B47003876C1 /* graphql in Resources */,
 				9576A30F2A66C7D8006F95A6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +397,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95A23E202A66D418003876C1 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		95A23E342A670C42003876C1 /* MultimoneyAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MultimoneyAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

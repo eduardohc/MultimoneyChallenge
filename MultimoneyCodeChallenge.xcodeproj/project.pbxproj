@@ -11,6 +11,7 @@
 		9576A30D2A66C7D6006F95A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576A30C2A66C7D6006F95A6 /* ContentView.swift */; };
 		9576A30F2A66C7D8006F95A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576A30E2A66C7D8006F95A6 /* Assets.xcassets */; };
 		9576A3122A66C7D8006F95A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */; };
+		95A23E222A66D418003876C1 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 95A23E212A66D418003876C1 /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A23E222A66D418003876C1 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = MultimoneyCodeChallenge;
+			packageProductDependencies = (
+				95A23E212A66D418003876C1 /* Apollo */,
+			);
 			productName = MultimoneyCodeChallenge;
 			productReference = 9576A3072A66C7D6006F95A6 /* MultimoneyCodeChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 9576A2FE2A66C7D6006F95A6;
+			packageReferences = (
+				95A23E202A66D418003876C1 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 9576A3082A66C7D6006F95A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95A23E202A66D418003876C1 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95A23E212A66D418003876C1 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95A23E202A66D418003876C1 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9576A2FF2A66C7D6006F95A6 /* Project object */;
 }

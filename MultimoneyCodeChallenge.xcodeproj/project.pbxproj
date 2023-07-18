@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		9576A30B2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576A30A2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift */; };
-		9576A30D2A66C7D6006F95A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576A30C2A66C7D6006F95A6 /* ContentView.swift */; };
 		9576A30F2A66C7D8006F95A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576A30E2A66C7D8006F95A6 /* Assets.xcassets */; };
 		9576A3122A66C7D8006F95A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */; };
 		95A23E222A66D418003876C1 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 95A23E212A66D418003876C1 /* Apollo */; };
 		95A23E302A670B47003876C1 /* graphql in Resources */ = {isa = PBXBuildFile; fileRef = 95A23E2F2A670B47003876C1 /* graphql */; };
 		95A23E352A670C42003876C1 /* MultimoneyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 95A23E342A670C42003876C1 /* MultimoneyAPI */; };
 		95A23E382A67122A003876C1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A23E372A67122A003876C1 /* Network.swift */; };
+		95A23E3D2A671A40003876C1 /* CharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A23E3C2A671A40003876C1 /* CharacterList.swift */; };
+		95A23E442A672952003876C1 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A23E432A672952003876C1 /* CharacterListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9576A3072A66C7D6006F95A6 /* MultimoneyCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultimoneyCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9576A30A2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimoneyCodeChallengeApp.swift; sourceTree = "<group>"; };
-		9576A30C2A66C7D6006F95A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9576A30E2A66C7D8006F95A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95A23E2F2A670B47003876C1 /* graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = graphql; sourceTree = SOURCE_ROOT; };
 		95A23E322A670C0C003876C1 /* MultimoneyAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MultimoneyAPI; sourceTree = "<group>"; };
 		95A23E372A67122A003876C1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		95A23E3C2A671A40003876C1 /* CharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterList.swift; sourceTree = "<group>"; };
+		95A23E432A672952003876C1 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +64,10 @@
 		9576A3092A66C7D6006F95A6 /* MultimoneyCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				95A23E422A672941003876C1 /* ViewModel */,
+				95A23E3B2A6718A3003876C1 /* View */,
 				95A23E252A66EF95003876C1 /* MultimoneyAPI */,
 				9576A30A2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift */,
-				9576A30C2A66C7D6006F95A6 /* ContentView.swift */,
 				9576A30E2A66C7D8006F95A6 /* Assets.xcassets */,
 				9576A3102A66C7D8006F95A6 /* Preview Content */,
 			);
@@ -109,6 +112,22 @@
 				95A23E372A67122A003876C1 /* Network.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		95A23E3B2A6718A3003876C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E3C2A671A40003876C1 /* CharacterList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95A23E422A672941003876C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E432A672952003876C1 /* CharacterListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,9 +208,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9576A30D2A66C7D6006F95A6 /* ContentView.swift in Sources */,
+				95A23E442A672952003876C1 /* CharacterListViewModel.swift in Sources */,
 				9576A30B2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift in Sources */,
 				95A23E382A67122A003876C1 /* Network.swift in Sources */,
+				95A23E3D2A671A40003876C1 /* CharacterList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,4 +42,20 @@ struct CharacterResultViewModel {
     var name: String {
         characterResult?.name ?? ""
     }
+    
+    var gender: String {
+        characterResult?.gender ?? ""
+    }
+    
+    var image: String {
+        characterResult?.image ?? ""
+    }
+    
+    var type: String {
+        characterResult?.type ?? ""
+    }
+    
+    var species: String {
+        characterResult?.species ?? ""
+    }
 }

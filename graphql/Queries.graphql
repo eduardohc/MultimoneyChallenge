@@ -1,0 +1,15 @@
+query GetCharacterList {
+  characters {
+    results {
+      id
+      name
+      gender
+      image
+      species
+      episode {
+        id
+        name
+      }
+    }
+  }
+}

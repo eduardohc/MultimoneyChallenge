@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		9576A30B2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576A30A2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift */; };
-		9576A30D2A66C7D6006F95A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576A30C2A66C7D6006F95A6 /* ContentView.swift */; };
 		9576A30F2A66C7D8006F95A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576A30E2A66C7D8006F95A6 /* Assets.xcassets */; };
 		9576A3122A66C7D8006F95A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */; };
+		95A23E222A66D418003876C1 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 95A23E212A66D418003876C1 /* Apollo */; };
+		95A23E302A670B47003876C1 /* graphql in Resources */ = {isa = PBXBuildFile; fileRef = 95A23E2F2A670B47003876C1 /* graphql */; };
+		95A23E352A670C42003876C1 /* MultimoneyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 95A23E342A670C42003876C1 /* MultimoneyAPI */; };
+		95A23E382A67122A003876C1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A23E372A67122A003876C1 /* Network.swift */; };
+		95A23E3D2A671A40003876C1 /* CharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A23E3C2A671A40003876C1 /* CharacterList.swift */; };
+		95A23E442A672952003876C1 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A23E432A672952003876C1 /* CharacterListViewModel.swift */; };
+		95A23E492A673F88003876C1 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 95A23E482A673F88003876C1 /* URLImage */; };
+		95A23E4B2A683459003876C1 /* PaginationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A23E4A2A683459003876C1 /* PaginationManager.swift */; };
+		95A23E512A68512B003876C1 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A23E502A68512B003876C1 /* CharacterDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9576A3072A66C7D6006F95A6 /* MultimoneyCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultimoneyCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9576A30A2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimoneyCodeChallengeApp.swift; sourceTree = "<group>"; };
-		9576A30C2A66C7D6006F95A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9576A30E2A66C7D8006F95A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95A23E2F2A670B47003876C1 /* graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = graphql; sourceTree = SOURCE_ROOT; };
+		95A23E322A670C0C003876C1 /* MultimoneyAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MultimoneyAPI; sourceTree = "<group>"; };
+		95A23E372A67122A003876C1 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		95A23E3C2A671A40003876C1 /* CharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterList.swift; sourceTree = "<group>"; };
+		95A23E432A672952003876C1 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		95A23E4A2A683459003876C1 /* PaginationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationManager.swift; sourceTree = "<group>"; };
+		95A23E502A68512B003876C1 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A23E352A670C42003876C1 /* MultimoneyAPI in Frameworks */,
+				95A23E492A673F88003876C1 /* URLImage in Frameworks */,
+				95A23E222A66D418003876C1 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +52,10 @@
 		9576A2FE2A66C7D6006F95A6 = {
 			isa = PBXGroup;
 			children = (
+				95A23E312A670C0C003876C1 /* Packages */,
 				9576A3092A66C7D6006F95A6 /* MultimoneyCodeChallenge */,
 				9576A3082A66C7D6006F95A6 /* Products */,
+				95A23E332A670C42003876C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +70,10 @@
 		9576A3092A66C7D6006F95A6 /* MultimoneyCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				95A23E422A672941003876C1 /* ViewModel */,
+				95A23E3B2A6718A3003876C1 /* View */,
+				95A23E252A66EF95003876C1 /* MultimoneyAPI */,
 				9576A30A2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift */,
-				9576A30C2A66C7D6006F95A6 /* ContentView.swift */,
 				9576A30E2A66C7D8006F95A6 /* Assets.xcassets */,
 				9576A3102A66C7D8006F95A6 /* Preview Content */,
 			);
@@ -65,6 +86,80 @@
 				9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95A23E252A66EF95003876C1 /* MultimoneyAPI */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E362A671214003876C1 /* Service */,
+				95A23E2F2A670B47003876C1 /* graphql */,
+			);
+			path = MultimoneyAPI;
+			sourceTree = "<group>";
+		};
+		95A23E312A670C0C003876C1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E322A670C0C003876C1 /* MultimoneyAPI */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		95A23E332A670C42003876C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95A23E362A671214003876C1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E372A67122A003876C1 /* Network.swift */,
+				95A23E4A2A683459003876C1 /* PaginationManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		95A23E3B2A6718A3003876C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E4D2A6850FC003876C1 /* CharacterDetail */,
+				95A23E4C2A6850F1003876C1 /* CharacterList */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95A23E422A672941003876C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E4E2A68510C003876C1 /* CharacterList */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		95A23E4C2A6850F1003876C1 /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E3C2A671A40003876C1 /* CharacterList.swift */,
+			);
+			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		95A23E4D2A6850FC003876C1 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E502A68512B003876C1 /* CharacterDetailView.swift */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		95A23E4E2A68510C003876C1 /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				95A23E432A672952003876C1 /* CharacterListViewModel.swift */,
+			);
+			path = CharacterList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +178,11 @@
 			dependencies = (
 			);
 			name = MultimoneyCodeChallenge;
+			packageProductDependencies = (
+				95A23E212A66D418003876C1 /* Apollo */,
+				95A23E342A670C42003876C1 /* MultimoneyAPI */,
+				95A23E482A673F88003876C1 /* URLImage */,
+			);
 			productName = MultimoneyCodeChallenge;
 			productReference = 9576A3072A66C7D6006F95A6 /* MultimoneyCodeChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +211,10 @@
 				Base,
 			);
 			mainGroup = 9576A2FE2A66C7D6006F95A6;
+			packageReferences = (
+				95A23E202A66D418003876C1 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				95A23E472A673F88003876C1 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 9576A3082A66C7D6006F95A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9576A3122A66C7D8006F95A6 /* Preview Assets.xcassets in Resources */,
+				95A23E302A670B47003876C1 /* graphql in Resources */,
 				9576A30F2A66C7D8006F95A6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9576A30D2A66C7D6006F95A6 /* ContentView.swift in Sources */,
+				95A23E442A672952003876C1 /* CharacterListViewModel.swift in Sources */,
 				9576A30B2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift in Sources */,
+				95A23E4B2A683459003876C1 /* PaginationManager.swift in Sources */,
+				95A23E512A68512B003876C1 /* CharacterDetailView.swift in Sources */,
+				95A23E382A67122A003876C1 /* Network.swift in Sources */,
+				95A23E3D2A671A40003876C1 /* CharacterList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +448,42 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95A23E202A66D418003876C1 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		95A23E472A673F88003876C1 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95A23E212A66D418003876C1 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95A23E202A66D418003876C1 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		95A23E342A670C42003876C1 /* MultimoneyAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MultimoneyAPI;
+		};
+		95A23E482A673F88003876C1 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95A23E472A673F88003876C1 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9576A2FF2A66C7D6006F95A6 /* Project object */;
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 import URLImage // Third party API to get images from URL
 
 struct CharacterList: View {
@@ -28,6 +29,7 @@ struct CharacterList: View {
                             }
                             
                             Text("\(character.name)")
+
                         }
                         .padding([.top, .bottom], 2)
                     }

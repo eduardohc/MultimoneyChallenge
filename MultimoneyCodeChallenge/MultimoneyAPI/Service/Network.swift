@@ -9,12 +9,15 @@ import Foundation
 import Apollo
 import MultimoneyAPI
 
-class Network {
+protocol NetworkService {
+    var apollo: ApolloClient { get }
+}
+
+class Network: NetworkService {
     static let shared = Network()
+    var apollo: ApolloClient
     
-    private let apollo: ApolloClient
-    
-    private init() {
+    init() {
         let url = URL(string: "https://rickandmortyapi.com/graphql")!
         apollo = ApolloClient(url: url)
     }

@@ -24,8 +24,8 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
     switch typename {
     case "Query": return MultimoneyAPI.Objects.Query
     case "Characters": return MultimoneyAPI.Objects.Characters
-    case "Info": return MultimoneyAPI.Objects.Info
     case "Character": return MultimoneyAPI.Objects.Character
+    case "Episode": return MultimoneyAPI.Objects.Episode
     default: return nil
     }
   }

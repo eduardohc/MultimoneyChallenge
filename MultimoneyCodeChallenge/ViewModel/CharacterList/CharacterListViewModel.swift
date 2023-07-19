@@ -10,7 +10,6 @@ import MultimoneyAPI
 
 class CharacterListViewModel: ObservableObject {
     @Published var characters: [CharacterResultViewModel] = []
-    
     private let networkService: Network
     
     init(networkService: Network) {
@@ -51,11 +50,27 @@ struct CharacterResultViewModel {
         characterResult?.image ?? ""
     }
     
-    var type: String {
-        characterResult?.type ?? ""
-    }
-    
     var species: String {
         characterResult?.species ?? ""
+    }
+    
+    var chevronImgName: String {
+        "chevron.right"
+    }
+    
+    var episode: [GetCharacterListQuery.Data.Characters.Result.Episode?] {
+        characterResult?.episode ?? []
+    }
+}
+
+struct EpisodeResultViewModel {
+    fileprivate let episodeResult: GetCharacterListQuery.Data.Characters.Result.Episode?
+    
+    var id: ID {
+        episodeResult?.id ?? ""
+    }
+    
+    var name: String {
+        episodeResult?.name ?? ""
     }
 }

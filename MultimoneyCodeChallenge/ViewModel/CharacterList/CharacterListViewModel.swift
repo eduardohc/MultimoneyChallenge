@@ -10,7 +10,6 @@ import MultimoneyAPI
 
 class CharacterListViewModel: ObservableObject {
     @Published var characters: [CharacterResultViewModel] = []
-    
     private let networkService: Network
     
     init(networkService: Network) {
@@ -57,5 +56,9 @@ struct CharacterResultViewModel {
     
     var species: String {
         characterResult?.species ?? ""
+    }
+    
+    var chevronImgName: String {
+        "chevron.right"
     }
 }

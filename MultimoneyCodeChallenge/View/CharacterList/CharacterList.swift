@@ -38,7 +38,12 @@ struct CharacterList: View {
                 .navigationTitle("Rick & Morty characters")
                 .navigationBarTitleDisplayMode(.inline)
                 
-                PaginationView(characterListVM: characterListVM)
+                /*
+                 Uncomment to see pagination simulation. Note: There is a call to API but nothing happend until we make some changes but for purposes of the main goal. There were no modifications.
+                 
+                 
+                 PaginationView(characterListVM: characterListVM)
+                 */   
             }
         }
         .onAppear {

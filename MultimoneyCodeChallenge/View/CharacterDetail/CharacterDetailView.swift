@@ -26,6 +26,7 @@ struct CharacterDetailView: View {
             Text(character.name)
                 .font(.title)
             
+            // Character section detail view was declared below to DRY
             CharacterSectionDetailView(image_name: "figure.dress.line.vertical.figure", text: "\(character.gender)")
             
             CharacterSectionDetailView(image_name: "person.fill.questionmark", text: "\(character.species)")

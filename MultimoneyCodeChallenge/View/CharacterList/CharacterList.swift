@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import URLImage
+import URLImage // Third party API to get images from URL
 
 struct CharacterList: View {
     @ObservedObject var characterListVM: CharacterListViewModel
@@ -28,10 +28,6 @@ struct CharacterList: View {
                             }
                             
                             Text("\(character.name)")
-                            
-//                            Image(systemName: character.chevronImgName)
-//                                .resizable()
-//                                .fixedSize()
                         }
                         .padding([.top, .bottom], 2)
                     }
@@ -48,6 +44,7 @@ struct CharacterList: View {
             }
         }
         .onAppear {
+            // Fetch data using apollo in Network service file
             characterListVM.fetchCharacters()
         }
     }
@@ -58,6 +55,8 @@ struct CharacterList_Previews: PreviewProvider {
         CharacterList(characterListVM: CharacterListViewModel(networkService: Network.shared))
     }
 }
+
+// TODO: - This Pagination view was created to demostrate how I will implement pagination with its own views. See comment above.
 
 struct PaginationView: View {
     @ObservedObject var characterListVM: CharacterListViewModel

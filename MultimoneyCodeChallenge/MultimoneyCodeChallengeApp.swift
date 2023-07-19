@@ -11,7 +11,7 @@ import SwiftUI
 struct MultimoneyCodeChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CharacterList(characterListVM: CharacterListViewModel(networkService: Network.shared))
         }
     }
 }

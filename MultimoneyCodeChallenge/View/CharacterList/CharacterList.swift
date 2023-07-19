@@ -15,25 +15,26 @@ struct CharacterList: View {
         NavigationStack {
             VStack {
                 List(characterListVM.characters, id: \.id) { character in
-                    HStack {
-                        if let imageUrl = URL(string: character.image) {
-                            URLImage(imageUrl) { image in
-                                image
-                                    .resizable()
-                                    .frame(width: 36, height: 36)
-                                    .clipShape(Circle())
+                    
+                    NavigationLink(destination: CharacterDetailView(character: character)) {
+                        HStack {
+                            if let imageUrl = URL(string: character.image) {
+                                URLImage(imageUrl) { image in
+                                    image
+                                        .resizable()
+                                        .frame(width: 36, height: 36)
+                                        .clipShape(Circle())
+                                }
                             }
+                            
+                            Text("\(character.name)")
+                            
+//                            Image(systemName: character.chevronImgName)
+//                                .resizable()
+//                                .fixedSize()
                         }
-                        
-                        Text("\(character.name)")
-                        
-                        Spacer()
-                        
-                        Image(systemName: character.chevronImgName)
-                            .resizable()
-                            .fixedSize()
+                        .padding([.top, .bottom], 2)
                     }
-                    .padding([.top, .bottom], 2)
                 }
                 .navigationTitle("Rick & Morty characters")
                 .navigationBarTitleDisplayMode(.inline)
@@ -43,7 +44,7 @@ struct CharacterList: View {
                  
                  
                  PaginationView(characterListVM: characterListVM)
-                 */   
+                 */
             }
         }
         .onAppear {

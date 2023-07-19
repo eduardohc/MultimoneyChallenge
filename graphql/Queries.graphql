@@ -1,17 +1,15 @@
 query GetCharacterList {
   characters {
-    info {
-      count
-      pages
-      next
-      prev
-    }
     results {
       id
       name
       gender
       image
-      type
+      species
+      episode {
+        id
+        name
+      }
     }
   }
 }

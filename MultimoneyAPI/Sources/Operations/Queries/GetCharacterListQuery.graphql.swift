@@ -11,20 +11,18 @@ public class GetCharacterListQuery: GraphQLQuery {
       query GetCharacterList {
         characters {
           __typename
-          info {
-            __typename
-            count
-            pages
-            next
-            prev
-          }
           results {
             __typename
             id
             name
             gender
             image
-            type
+            species
+            episode {
+              __typename
+              id
+              name
+            }
           }
         }
       }
@@ -55,38 +53,10 @@ public class GetCharacterListQuery: GraphQLQuery {
       public static var __parentType: ApolloAPI.ParentType { MultimoneyAPI.Objects.Characters }
       public static var __selections: [ApolloAPI.Selection] { [
         .field("__typename", String.self),
-        .field("info", Info?.self),
         .field("results", [Result?]?.self),
       ] }
 
-      public var info: Info? { __data["info"] }
       public var results: [Result?]? { __data["results"] }
-
-      /// Characters.Info
-      ///
-      /// Parent Type: `Info`
-      public struct Info: MultimoneyAPI.SelectionSet {
-        public let __data: DataDict
-        public init(_dataDict: DataDict) { __data = _dataDict }
-
-        public static var __parentType: ApolloAPI.ParentType { MultimoneyAPI.Objects.Info }
-        public static var __selections: [ApolloAPI.Selection] { [
-          .field("__typename", String.self),
-          .field("count", Int?.self),
-          .field("pages", Int?.self),
-          .field("next", Int?.self),
-          .field("prev", Int?.self),
-        ] }
-
-        /// The length of the response.
-        public var count: Int? { __data["count"] }
-        /// The amount of pages.
-        public var pages: Int? { __data["pages"] }
-        /// Number of the next page (if it exists)
-        public var next: Int? { __data["next"] }
-        /// Number of the previous page (if it exists)
-        public var prev: Int? { __data["prev"] }
-      }
 
       /// Characters.Result
       ///
@@ -102,7 +72,8 @@ public class GetCharacterListQuery: GraphQLQuery {
           .field("name", String?.self),
           .field("gender", String?.self),
           .field("image", String?.self),
-          .field("type", String?.self),
+          .field("species", String?.self),
+          .field("episode", [Episode?].self),
         ] }
 
         /// The id of the character.
@@ -114,8 +85,30 @@ public class GetCharacterListQuery: GraphQLQuery {
         /// Link to the character's image.
         /// All images are 300x300px and most are medium shots or portraits since they are intended to be used as avatars.
         public var image: String? { __data["image"] }
-        /// The type or subspecies of the character.
-        public var type: String? { __data["type"] }
+        /// The species of the character.
+        public var species: String? { __data["species"] }
+        /// Episodes in which this character appeared.
+        public var episode: [Episode?] { __data["episode"] }
+
+        /// Characters.Result.Episode
+        ///
+        /// Parent Type: `Episode`
+        public struct Episode: MultimoneyAPI.SelectionSet {
+          public let __data: DataDict
+          public init(_dataDict: DataDict) { __data = _dataDict }
+
+          public static var __parentType: ApolloAPI.ParentType { MultimoneyAPI.Objects.Episode }
+          public static var __selections: [ApolloAPI.Selection] { [
+            .field("__typename", String.self),
+            .field("id", MultimoneyAPI.ID?.self),
+            .field("name", String?.self),
+          ] }
+
+          /// The id of the episode.
+          public var id: MultimoneyAPI.ID? { __data["id"] }
+          /// The name of the episode.
+          public var name: String? { __data["name"] }
+        }
       }
     }
   }

@@ -9,6 +9,8 @@ import SwiftUI
 import URLImage
 
 struct CharacterDetailView: View {
+    @State var isListExpanded: Bool = true
+    @State var isImageLoaded: Bool = true
     var character: CharacterResultViewModel
     
     var body: some View {
@@ -28,38 +30,42 @@ struct CharacterDetailView: View {
             
             // Character section detail view was declared below to DRY
 
-            CharacterSectionDetailView(image_name: "figure.dress.line.vertical.figure", text: "\(character.gender)")
+            CharacterSectionDetailView(isListExpanded: $isListExpanded, image_name: "figure.dress.line.vertical.figure", text: "\(character.gender)", isExpandibleList: false)
             
-            CharacterSectionDetailView(image_name: "person.fill.questionmark", text: "\(character.species)")
+            CharacterSectionDetailView(isListExpanded: $isListExpanded, image_name: "person.fill.questionmark", text: "\(character.species)", isExpandibleList: false)
             
-            CharacterSectionDetailView(image_name: "film.stack", text: "\(character.name) episodes")
+            CharacterSectionDetailView(isListExpanded: $isListExpanded, image_name: "film.stack", text: "\(character.name) episodes", isExpandibleList: true)
             
             Spacer()
             
-            ScrollView {
-                ForEach(character.episode, id: \.self) { episode in
-                    if let episodeResult = episode, let episodeName = episodeResult.name {
-                        HStack {
-                            Text(episodeName)
-                                .padding(.leading)
-                            Spacer()
+            if isListExpanded {
+                ScrollView {
+                    ForEach(character.episode, id: \.self) { episode in
+                        if let episodeResult = episode, let episodeName = episodeResult.name {
+                            HStack {
+                                Text(episodeName)
+                                    .padding(.leading)
+                                Spacer()
+                            }
+                            .frame(height: 35, alignment: .leading)
+                            .background(.gray.opacity(0.05))
+                            .cornerRadius(10)
+                            .padding([.leading, .trailing], 15)
                         }
-                        .frame(height: 35, alignment: .leading)
-                        .background(.gray.opacity(0.05))
-                        .cornerRadius(10)
-                        .padding([.leading, .trailing], 15)
                     }
                 }
+                .padding()
             }
-            .padding()
         }
         .frame(maxWidth: .infinity)
     }
 }
 
 struct CharacterSectionDetailView: View {
+    @Binding var isListExpanded: Bool
     var image_name: String
     var text: String
+    var isExpandibleList: Bool
     
     var body: some View {
         VStack {
@@ -73,6 +79,15 @@ struct CharacterSectionDetailView: View {
                     .font(Font.custom("Montserrat-SemiBold", size: 18))
                     .foregroundColor(Color.black.opacity(0.8))
                 Spacer()
+                
+                if isExpandibleList {
+                    Button(action: {
+                        isListExpanded.toggle()
+                    }, label: {
+                        Image(systemName: "chevron.down")
+                            .padding(.trailing, 12)
+                    }).foregroundColor(.black).opacity(0.5)
+                }
             }
             .padding(.leading, 15)
             .frame(height: 60, alignment: .leading)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951F1F172A68AFCD00C2578C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F1F162A68AFCD00C2578C /* SplashView.swift */; };
 		9576A30B2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576A30A2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift */; };
 		9576A30F2A66C7D8006F95A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576A30E2A66C7D8006F95A6 /* Assets.xcassets */; };
 		9576A3122A66C7D8006F95A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576A3112A66C7D8006F95A6 /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		951F1F162A68AFCD00C2578C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		9576A3072A66C7D6006F95A6 /* MultimoneyCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultimoneyCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9576A30A2A66C7D6006F95A6 /* MultimoneyCodeChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimoneyCodeChallengeApp.swift; sourceTree = "<group>"; };
 		9576A30E2A66C7D8006F95A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +35,7 @@
 		95A23E432A672952003876C1 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 		95A23E4A2A683459003876C1 /* PaginationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationManager.swift; sourceTree = "<group>"; };
 		95A23E502A68512B003876C1 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		95A23E552A689798003876C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 		9576A3092A66C7D6006F95A6 /* MultimoneyCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				95A23E552A689798003876C1 /* Info.plist */,
 				95A23E422A672941003876C1 /* ViewModel */,
 				95A23E3B2A6718A3003876C1 /* View */,
 				95A23E252A66EF95003876C1 /* MultimoneyAPI */,
@@ -126,6 +130,7 @@
 			children = (
 				95A23E4D2A6850FC003876C1 /* CharacterDetail */,
 				95A23E4C2A6850F1003876C1 /* CharacterList */,
+				951F1F162A68AFCD00C2578C /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				95A23E512A68512B003876C1 /* CharacterDetailView.swift in Sources */,
 				95A23E382A67122A003876C1 /* Network.swift in Sources */,
 				95A23E3D2A671A40003876C1 /* CharacterList.swift in Sources */,
+				951F1F172A68AFCD00C2578C /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,9 +385,9 @@
 				DEVELOPMENT_TEAM = HS58FUQ5YL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MultimoneyCodeChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -408,9 +414,9 @@
 				DEVELOPMENT_TEAM = HS58FUQ5YL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MultimoneyCodeChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
